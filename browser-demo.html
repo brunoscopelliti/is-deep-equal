@@ -1,0 +1,24 @@
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>is-deep-equal</title>
+</head>
+<body>
+  <h1>is-deep-equal</h1>
+
+  <script src='jspm_packages/system.js'></script>
+  <script src='config.js'></script>
+
+  <script type='text/javascript'>
+    System.import('./index.js').then(function(module) {
+      'use strict';
+
+      const isDeepEqual = module.default;
+      const subject = { val: 42, list: [ { lv: 1 }, { lv: 2 } ] };
+
+      console.log(isDeepEqual(subject, { val: 42, list: [ { lv: 1 }, { lv: 2 } ] })); // true
+    });
+  </script>
+
+</body>
+</html>
