@@ -1,4 +1,17 @@
 
+
+
+/*
+ * @name type
+ * @function
+ * @private
+ * @description Return the type of the input value; it fix the problem with "null", and brings consistence.
+ */
+const type = subject => Object.prototype.toString.call(subject).toLowerCase();
+
+
+
+
 /*
  * @name deepEqual
  * @public
@@ -16,5 +29,15 @@ export default function deepEqual(valA, valB){
   if (valA === valB){
     return true;
   }
+
+  // 2)
+  // if the input values have different type, or they are primitives
+  // in force of the check (1) here we can return "false"
+  if (type(valA) != type(valB) || typeof valA != 'object'){
+    return false;
+  }
+
+
+  return true;
 
 }
