@@ -86,5 +86,6 @@ module.exports = function (grunt) {
 
 
   grunt.registerTask('dev', ['watch']);
+  grunt.registerTask('unit', ['babel', 'browserify', 'connect:unit']);
 
 };
