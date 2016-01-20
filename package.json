@@ -1,10 +1,10 @@
 {
   "name": "is-deep-equal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check if an object is deep equal to another one",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt unit"
   },
   "repository": {
     "type": "git",
