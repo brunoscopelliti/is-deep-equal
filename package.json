@@ -1,6 +1,6 @@
 {
   "name": "is-deep-equal",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Check if an object is deep equal to another one",
   "main": "index.js",
   "scripts": {
