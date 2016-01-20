@@ -1,49 +1,18 @@
 
-/*
- * @name type
- * @function
- * @private
- * @description Return the type of the input value; it fix the problem with "null", and brings consistence (array, date ...).
- */
-const type = subject => Object.prototype.toString.call(subject).toLowerCase().match(/ ([\w]+)/)[1];
-
-
-/*
- * @name getOwnPropNames
- * @function
- * @private
- * @description Return the own properties of the input parameter.
- */
-const getOwnPropNames = obj => Object.getOwnPropertyNames.call(null, obj);
-
-
-/*
- * @name getOwnPropSymbols
- * @function
- * @private
- * @description Return the own symbols of the input parameter.
- */
-const getOwnPropSymbols = obj => Object.getOwnPropertySymbols.call(null, obj);
-
-
-/*
- * @name getPrototypeOf
- * @function
- * @private
- * @description Return the prototype object of the input parameter.
- */
-const getPrototypeOf = obj => Object.getPrototypeOf.call(null, obj);
-
-
-
-
-/*
- * @name deepEqual
- * @public
- * @type function
+/**
+ *
+ * @name is-deep-equal.js
+ * @version 1.0.2
+ *
  * @description Check if the input values provided are deep equals; in this case returns true, otherwise false.
  *
- * @example deepEqual({ foo: bar }, { foo: bar, baz: kun }); // false
+ * @param {Object} valA
+ * @param {Object} valB
+ *
+ * @example
+ *
+ * deepEqual({ foo: bar }, { foo: bar, baz: kun }); // false
+ *
  */
 export default function deepEqual(valA, valB){
 
@@ -92,3 +61,40 @@ export default function deepEqual(valA, valB){
   return true;
 
 }
+
+
+
+/**
+ * @name type
+ * @function
+ * @private
+ * @description Return the type of the input value; it fix the problem with "null", and brings consistence (array, date ...).
+ */
+const type = subject => Object.prototype.toString.call(subject).toLowerCase().match(/ ([\w]+)/)[1];
+
+
+/**
+ * @name getOwnPropNames
+ * @function
+ * @private
+ * @description Return the own properties of the input parameter.
+ */
+const getOwnPropNames = obj => Object.getOwnPropertyNames.call(null, obj);
+
+
+/**
+ * @name getOwnPropSymbols
+ * @function
+ * @private
+ * @description Return the own symbols of the input parameter.
+ */
+const getOwnPropSymbols = obj => Object.getOwnPropertySymbols.call(null, obj);
+
+
+/**
+ * @name getPrototypeOf
+ * @function
+ * @private
+ * @description Return the prototype object of the input parameter.
+ */
+const getPrototypeOf = obj => Object.getPrototypeOf.call(null, obj);
