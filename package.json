@@ -1,6 +1,6 @@
 {
   "name": "is-deep-equal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Check if an object is deep equal to another one",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,9 @@
     "deep",
     "equality",
     "assert",
-    "test"
+    "test",
+    "es6",
+    "ecmascript 2015"
   ],
   "author": "Bruno Scopelliti",
   "license": "MIT",
